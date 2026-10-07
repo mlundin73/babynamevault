@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BabyNameVault — Discover, Spell &amp; Create Baby Names</title>
+<meta name="description" content="Explore baby names by culture, style and gender. Look up a name, browse by letter, or unscramble random letters to discover names you'd never have thought of.">
+<link rel="canonical" href="https://SITE_URL_PLACEHOLDER/">
+<meta property="og:title" content="BabyNameVault — Discover, Spell &amp; Create Baby Names"><meta property="og:type" content="website">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="wordmark">Baby<span>Name</span>Vault</a>
+  <p class="tagline">Discover, spell &amp; create baby names - across every culture and style</p>
+</header>
+
+<main>
+  <section class="meaning-tool" id="meaning-tool">
+    <h2>What does your name mean?</h2>
+    <p class="meaning-sub">Fill in the blank with a name you like - see what it means, where it comes from, and every spelling we have.</p>
+    <form id="meaning-form" class="meaning-form" autocomplete="off">
+      <input type="text" id="meaning-input" placeholder="Type a name, e.g. Sofia" aria-label="Name to look up">
+      <button type="submit" class="meaning-go">Find meaning</button>
+    </form>
+    <div class="meaning-results" id="meaning-results"></div>
+  </section>
+
+  <section class="picker" id="picker">
+    <div class="picker-step" id="step-culture">
+      <h2>1. Pick a culture</h2>
+      <div class="chip-row" id="culture-row"></div>
+    </div>
+
+    <div class="picker-step" id="step-category">
+      <h2>2. Pick a style</h2>
+      <div class="chip-row" id="category-row">
+        <button class="chip" data-category="traditional">Traditional</button>
+        <button class="chip" data-category="trendy">Modern Trendy Respelling</button>
+        <button class="chip" data-category="distinctive">Distinctive &amp; Inventive</button>
+      </div>
+    </div>
+
+    <div class="picker-step" id="step-gender">
+      <h2>3. Boy, girl, or neutral?</h2>
+      <div class="chip-row" id="gender-row">
+        <button class="chip" data-gender="boy">Boy</button>
+        <button class="chip" data-gender="girl">Girl</button>
+        <button class="chip" data-gender="neutral">Neutral</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-modes" id="search-modes" hidden>
+    <div class="selection-summary" id="selection-summary"></div>
+    <button class="reset-btn" id="reset-btn">Start over</button>
+
+    <div class="mode-tabs" id="mode-tabs">
+      <button class="mode-tab active" data-mode="lookup">Look up a name</button>
+      <button class="mode-tab" data-mode="letter">Browse by letter</button>
+      <button class="mode-tab" data-mode="unscramble">Unscramble letters</button>
+    </div>
+
+    <div class="mode-panel" id="panel-lookup">
+      <input type="text" id="lookup-input" placeholder="Type a name, e.g. Aaliyah" autocomplete="off">
+    </div>
+
+    <div class="mode-panel" id="panel-letter" hidden>
+      <div class="letter-row" id="letter-row"></div>
+    </div>
+
+    <div class="mode-panel" id="panel-unscramble" hidden>
+      <input type="text" id="unscramble-input" placeholder="Type some letters, e.g. ayaanl" autocomplete="off">
+      <p class="hint">We'll find every name in this category that can be made from those letters.</p>
+    </div>
+
+    <div class="results" id="results"></div>
+  </section>
+</main>
+
+<section class="glossary" id="glossary">
+  <h2 class="glossary-title">How this is organized</h2>
+  <p class="glossary-intro">Every name in BabyNameVault is grouped three ways: by culture, by style, and by gender. Here's exactly what each group means.</p>
+
+  <h3 class="glossary-subtitle">The 3 styles</h3>
+  <div class="glossary-styles">
+    <div class="glossary-style-card">
+      <strong>Traditional</strong>
+      <p>The established, classic form of a name as it's been spelled for generations within that culture.</p>
+    </div>
+    <div class="glossary-style-card">
+      <strong>Modern Trendy Respelling</strong>
+      <p>A popular, phonetic twist on a familiar name that's common in recent birth records (e.g. Madison to Madisyn).</p>
+    </div>
+    <div class="glossary-style-card">
+      <strong>Distinctive &amp; Inventive</strong>
+      <p>More unique, standout spellings and invented forms that push further from the traditional version.</p>
+    </div>
+  </div>
+
+  <h3 class="glossary-subtitle">The 11 cultures</h3>
+  <div class="glossary-grid">
+    <div class="glossary-card">
+      <strong>African</strong>
+      <p>Naming traditions from across the African continent - Yoruba, Igbo, Swahili, Akan, Zulu and more - not tied to the U.S.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>African American</strong>
+      <p>Contemporary Black American naming traditions, including classic names and the modern inventive-spelling tradition distinct to the U.S.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Arabic</strong>
+      <p>Names rooted in Arabic language and naming conventions, shown with native Arabic script alongside the Latin transliteration.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>East Asian</strong>
+      <p>Names from Chinese, Japanese and Korean naming traditions, shown with native script and common romanization variants.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Indian / South Asian</strong>
+      <p>Names from Hindi and other South Asian languages, shown with Devanagari script and transliteration variants.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Irish / Celtic</strong>
+      <p>Names rooted in Irish Gaelic, shown alongside the common English phonetic spelling parents often use.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Jewish / Hebrew</strong>
+      <p>Names rooted in Hebrew and Jewish tradition, shown with Hebrew script and transliteration variants.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Latino / Hispanic</strong>
+      <p>Names from Spanish-language naming traditions across Latin America and Spain, shown with accented native-spelling variants.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Pacific Islander / Hawaiian</strong>
+      <p>Names from Hawaiian and other Pacific Islander traditions, including Samoan, Tongan, Fijian and Maori naming customs.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Southeast Asian</strong>
+      <p>Names from Vietnamese, Thai, Indonesian, Filipino and other Southeast Asian naming traditions.</p>
+    </div>
+    <div class="glossary-card">
+      <strong>Western / European</strong>
+      <p>Names rooted in English and broader European naming traditions - the names most familiar in the U.S. mainstream.</p>
+    </div>
+  </div>
+
+  <p class="glossary-note">Each name also shows every real spelling variant side by side, and native-script names include the original script wherever one exists - so you see exactly how a name looks and sounds in its own language, not just an anglicized guess.</p>
+</section>
+
+
+
+<footer class="site-footer">
+  <nav class="footer-az" aria-label="Browse names A to Z"><strong>Browse all names:</strong> <a href="names/a.html">A</a> <a href="names/b.html">B</a> <a href="names/c.html">C</a> <a href="names/d.html">D</a> <a href="names/e.html">E</a> <a href="names/f.html">F</a> <a href="names/g.html">G</a> <a href="names/h.html">H</a> <a href="names/i.html">I</a> <a href="names/j.html">J</a> <a href="names/k.html">K</a> <a href="names/l.html">L</a> <a href="names/m.html">M</a> <a href="names/n.html">N</a> <a href="names/o.html">O</a> <a href="names/p.html">P</a> <a href="names/q.html">Q</a> <a href="names/r.html">R</a> <a href="names/s.html">S</a> <a href="names/t.html">T</a> <a href="names/u.html">U</a> <a href="names/v.html">V</a> <a href="names/w.html">W</a> <a href="names/x.html">X</a> <a href="names/y.html">Y</a> <a href="names/z.html">Z</a> </nav>
+  <p>BabyNameVault - built across cultures, styles and spellings. Growing all the time.</p>
+</footer>
+
+<div class="modal-backdrop" id="share-modal" hidden>
+  <div class="modal-card">
+    <canvas id="share-canvas" width="1080" height="1080"></canvas>
+    <div class="modal-actions">
+      <button id="share-copy-btn">Copy image</button>
+      <button id="share-download-btn" class="secondary">Download</button>
+      <button id="share-close-btn" class="secondary">Close</button>
+    </div>
+    <p class="modal-note" id="share-note"></p>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

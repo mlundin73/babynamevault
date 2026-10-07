@@ -1,0 +1,12 @@
+.page{max-width:820px;margin:0 auto;padding:16px}
+.page h1{font-size:1.8rem;margin:.4em 0}.page h1 .sub{display:block;font-size:.95rem;font-weight:400;opacity:.7;margin-top:.2em}
+.grp{margin:18px 0;padding:14px;border:1px solid rgba(128,128,128,.3);border-radius:12px}.grp h2{margin:0 0 8px;font-size:1.1rem}
+.muted{opacity:.7}.cta{font-weight:600}a.variant-pill{text-decoration:none}.variant-pill.cur{font-weight:700}
+.az{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.az a{padding:4px 9px;border:1px solid rgba(128,128,128,.35);border-radius:8px;text-decoration:none}
+.namelist{columns:3 180px;list-style:none;padding:0}.namelist li{padding:2px 0}
+.page-foot{text-align:center;padding:24px;opacity:.8}.page .variants{display:flex;flex-wrap:wrap;gap:8px}
+.page .variant-pill{display:inline-block;padding:5px 12px;border-radius:999px;background:#efe7fb;color:#4b2e8f;font-size:.95rem;border:1px solid #d9c9f3}
+.page a.variant-pill:hover{background:#e0d2f7}.page .variant-pill.cur{background:#4b2e8f;color:#fff;border-color:#4b2e8f}
+.page a{color:#5b3bb0}.page .cta{color:#5b3bb0}.namelist a{text-decoration:none}
+.footer-az a{margin:0 3px}
+@media (prefers-color-scheme: dark){.page .variant-pill{background:#2d2250;color:#d9c9f3;border-color:#4a3a7a}.page .variant-pill.cur{background:#a78bfa;color:#1a1033}.page a{color:#b9a2f5}}
